@@ -1,2 +1,2 @@
 # vimrc
-This is my Vim configuration. I love it and I will continue to tweak Vim.
+This is my Vim configuration. I love Vim and I will continue to tweak it.
