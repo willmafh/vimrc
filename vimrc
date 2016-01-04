@@ -6,9 +6,6 @@ filetype on
 filetype plugin on
 filetype indent on
 
-" setup the ctrlp plugin
-set runtimepath^=~/.vim/bundle/ctrlp.vim
-
 " Make the man page appear in a Vim window, then you can use the command:
 " :Man to find what you need, for example: :Man 3 printf.
 runtime! ftplugin/man.vim
@@ -96,7 +93,8 @@ set smarttab
 set shiftwidth=4
 set tabstop=4
 
-" Number of spaces that a <Tab> counts for while performing editing operations, like inserting a <Tab> or using <BS>	
+" Number of spaces that a <Tab> counts for while performing editing operations,
+" like inserting a <Tab> or using <BS>	
 " set softtabstop=4
 
 " Enable C-style indentation
@@ -135,8 +133,7 @@ set number
 " Minimal number of columns to use for the line number
 set numberwidth=3
 
-" Set color scheme that I like
-" colorscheme darkblue
+" Set color scheme that I like colorscheme darkblue
 if has ("gui_running")
     colorscheme desert
 else
@@ -181,18 +178,13 @@ map <C-l> <C-W>l
 nmap <F3> a<C-R>=strftime("%Y/%m/%d %a %I:%M %P")<CR><Esc>
 imap <F3> <C-R>=strftime("%Y/%m/%d %a %I:%M %P")<CR>
 
-" To change the default value of the AUTHOR and COMPANY of bash-support
-" let g:BASH_AuthorName	=	'willmafh'
-" let g:BASH_Email 		=	'willmafh@hotmail.com'
-" let g:BASH_Company 	=	'Deepin'
+" Setup the ctrlp plugin
+set runtimepath^=~/.vim/bundle/ctrlp.vim
 
 " Powerline configuration
 set laststatus=2
 " Explicitly tell vim that the terminal supports 256 colors
 set t_Co=256
 
-" jedi-vim configuration, if want to set more, please refer to the jedi-vim doc
-let g:jedi#completions_command = "<C-N>"
-let g:jedi#goto_definitions_command = "<leader>`"
-
+" Set up pathogen to easily manage plugins
 call pathogen#infect()
