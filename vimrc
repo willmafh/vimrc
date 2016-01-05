@@ -30,6 +30,16 @@ let mapleader="\<Space>"
 " Fast saving
 nmap <leader>w :w<CR>
 nmap <leader>q :q<CR>
+
+" The first keystroke will indicate whether to move up or down. [ will move
+" up and ] will move down. The next keystroke indicates the type of brace
+" to match. If it same as the previous keystroke then the cursor will move
+" {. If the keystroke is different then the cursor will move to }.
+map [[ ?{<CR>w99[{
+map ][ /}<CR>b99]}
+map ]] j0[[%/{<CR>
+map [] k$][%?}<CR>
+
 " Sets how many lines of history Vim has to remember
 set history=100
 
