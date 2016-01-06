@@ -196,5 +196,14 @@ set laststatus=2
 " Explicitly tell vim that the terminal supports 256 colors
 set t_Co=256
 
+" syntastic settings
+set statusline+=%#warningmsg#
+set statusline+=%{SyntasticStatuslineFlag()}
+set statusline+=%*
+let g:syntastic_always_populate_loc_list = 1
+let g:syntastic_auto_loc_list = 1
+let g:syntastic_check_on_open = 1
+let g:syntastic_check_on_wq = 0
+
 " Set up pathogen to easily manage plugins
 call pathogen#infect()
