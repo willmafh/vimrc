@@ -204,6 +204,8 @@ let g:syntastic_always_populate_loc_list = 1
 let g:syntastic_auto_loc_list = 1
 let g:syntastic_check_on_open = 1
 let g:syntastic_check_on_wq = 0
+" Set syntastic to use C++11 compiler
+let g:syntastic_cpp_compiler_options = '--std=C++11'
 
 " Set up pathogen to easily manage plugins
 call pathogen#infect()
